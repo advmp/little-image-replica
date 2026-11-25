@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Website structure
+- Keep shared website navigation/footer and the toast host in the root route around its outlet so every content page uses the same shell.
+- Keep page-specific metadata in leaf route heads, using the browser-safe metadata helper to prevent inherited social previews.
+- Keep partnership forms frontend-only and share the Zod schema between form validation and tests; no submission is delivered or persisted until explicitly requested.
+- Use the site components for shared editorial layouts and the inline functional flow schematic; keep proprietary circuitry out of the schematic.
